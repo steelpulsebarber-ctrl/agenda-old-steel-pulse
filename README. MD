@@ -1,1 +1,77 @@
 
+Steel Pulse Barber
+
+Agenda e Gestão da Barbearia
+
+Sistema de agenda e gestão desenvolvido para a Steel Pulse Barber, com foco na organização dos horários, clientes, serviços, planos e relacionamento com os clientes.
+
+✂️ Serviços
+
+- Corte clássico
+- Corte degradê
+- Corte + barba
+- Barba
+- Outros serviços da barbearia
+
+📅 Agenda
+
+A agenda será organizada de acordo com a duração de cada serviço, facilitando o controle dos horários e evitando conflitos.
+
+Horários atuais:
+
+- Terça a sexta: 09:00 às 19:00
+- Intervalo: 12:00 às 13:00
+- Sábado: 09:00 às 17:00
+- Intervalo de almoço: 1 hora
+
+⭐ Planos VIP
+
+Área destinada aos clientes assinantes, com controle de:
+
+- Planos mensais
+- Quantidade de cortes
+- Serviços incluídos
+- Controle de utilização
+- Clientes assinantes
+- Benefícios exclusivos
+
+💳 Pagamentos
+
+O sistema deverá permitir o controle de pagamentos por:
+
+- Pix
+- Cartão de débito
+- Cartão de crédito
+
+Também será considerado desconto para pagamentos via Pix e o controle das taxas das operadoras de cartão.
+
+🎁 Fidelização
+
+Recursos planejados:
+
+- Programa de fidelidade
+- Aniversariantes
+- Lembretes de retorno
+- Histórico de atendimentos
+- Comunicação com clientes pelo WhatsApp
+
+🧴 Produtos
+
+Controle e divulgação de produtos disponíveis na barbearia, incluindo pomadas e shampoos de uso dermatológico.
+
+📸 Antes e Depois
+
+Espaço para registrar e apresentar trabalhos realizados pela Steel Pulse, permitindo mostrar resultados de cortes e estilos aos clientes.
+
+👥 Equipe
+
+A estrutura foi planejada para comportar inicialmente até 3 profissionais, podendo chegar a 4 barbeiros conforme o crescimento da barbearia.
+
+🚀 Objetivo
+
+Criar uma ferramenta simples, prática e profissional para organizar a operação da Steel Pulse Barber, melhorar a experiência dos clientes e facilitar o crescimento da barbearia.
+
+---
+
+Steel Pulse Barber
+Estilo, precisão e tradição.
