@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steel Pulse Barber - Agenda</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #292929);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #c9a227;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #d4af37;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      border: 1px solid #333;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      color: #ccc;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      padding: 13px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      font-size: 16px;
+    }
+
+    input,
+    select {
+      background: #111;
+      color: #fff;
+    }
+
+    button {
+      margin-top: 15px;
+      background: #d4af37;
+      color: #111;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #f0d15a;
+    }
+
+    .agenda-item {
+      background: #252525;
+      border-left: 4px solid #d4af37;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .pix {
+      color: #65d68b;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      padding: 30px 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">STEEL PULSE BARBER</div>
+    <div class="subtitle">
+      Estilo, precisão e tradição
+    </div>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <h2>📅 Nova Agendamento</h2>
+
+      <label for="nome">Nome do cliente</label>
+      <input id="nome" type="text" placeholder="Digite o nome">
+
+      <label for="servico">Serviço</label>
+      <select id="servico">
+        <option value="Corte Clássico">Corte Clássico - R$ 60,00</option>
+        <option value="Degradê">Degradê - R$ 70,00</option>
+        <option value="Cabelo + Barba">Cabelo + Barba - R$ 100,00</option>
+      </select>
+
+      <label for="data">Data</label>
+      <input id="data" type="date">
+
+      <label for="hora">Horário</label>
+      <input id="hora" type="time">
+
+      <button onclick="agendar()">AGENDAR CLIENTE</button>
+    </div>
+
+    <div class="card">
+      <h2>💈 Agenda de Hoje</h2>
+      <div id="agenda">
+        <p style="color:#888;">
+          Nenhum atendimento agendado ainda.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>⭐ Planos VIP</h2>
+
+      <div class="agenda-item">
+        <strong>Plano Corte VIP</strong>
+        <p>3 cortes por mês</p>
+        <p class="price">R$ 120,00</p>
+      </div>
+
+      <div class="agenda-item">
+        <strong>Plano Cabelo + Barba</strong>
+        <p>2 atendimentos por mês</p>
+        <p class="price">R$ 140,00</p>
+      </div>
+
+      <div class="agenda-item">
+        <strong>Pagamento via Pix</strong>
+        <p class="pix">5% de desconto no Pix</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Steel Pulse Barber © 2026<br>
+    Agenda e Gestão da Barbearia
+  </footer>
+
+  <script>
+    function agendar() {
+      const nome = document.getElementById("nome").value;
+      const servico = document.getElementById("servico").value;
+      const data = document.getElementById("data").value;
+      const hora = document.getElementById("hora").value;
+      const agenda = document.getElementById("agenda");
+
+      if (!nome || !data || !hora) {
+        alert("Preencha nome, data e horário.");
+        return;
+      }
+
+      const item = document.createElement("div");
+      item.className = "agenda-item";
+
+      item.innerHTML = `
+        <strong>${nome}</strong><br>
+        ${servico}<br>
+        📅 ${data} às ${hora}
+      `;
+
+      if (
+        agenda.innerHTML.includes("Nenhum atendimento")
+      ) {
+        agenda.innerHTML = "";
+      }
+
+      agenda.appendChild(item);
+
+      document.getElementById("nome").value = "";
+      document.getElementById("data").value = "";
+      document.getElementById("hora").value = "";
+    }
+  </script>
+
+</body>
+</html>
